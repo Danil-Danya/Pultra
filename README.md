@@ -1,75 +1,98 @@
-# Nuxt Minimal Starter
+<p align="center">
+  <img src="https://pultra.kls-digital.ru/images/logos/logo-footer.svg" alt="Pultra Logo" height="100" />
+</p>
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Pultra — сайт завода композитных изделий
 
-## Setup
+🛠 **Проект студии Digital KLS**  
+📍 **Завод композитных изделий, Санкт-Петербург**  
+👨‍💻 **Фронтенд-разработка: Сабитов Данил Владиславович**
 
-Make sure to install dependencies:
+🔗 **Тестовая версия**: [https://pultra.kls-digital.ru](https://pultra.kls-digital.ru)
 
-```bash
-# npm
-npm install
+---
 
-# pnpm
-pnpm install
+## 🚀 Технологии
 
-# yarn
-yarn install
+Проект реализован на базе **Nuxt.js (Vue 3)** с использованием следующих технологий:
 
-# bun
-bun install
-```
+- **Nuxt.js / Vue.js**
+- **SCSS**
+- **GSAP** — анимации
+- **Swiper.js** — слайдеры
+- **Three.js** — 3D-модели
+- **Axios** — запросы к API
+- **Pinia** — глобальное состояние
+- **JavaScript**
 
-## Development Server
+Архитектура построена по кастомизированному паттерну **Feature-Sliced Design (FSD)** с адаптацией под нужды проекта.
 
-Start the development server on `http://localhost:3000`:
+---
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
+## 📁 Структура проекта
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+src/
+├── shared-ui/     # Универсальные UI-элементы (кнопки, инпуты, элементы интерфейса)
+├── widgets/       # Виджеты и карточки, собранные из shared-ui
+├── features/      # Бизнес-фичи: слайдеры, формы, загрузчики, 3D-плееры
+├── composables/   # Переиспользуемые функции (setup-функции для компонентов)
+├── entities/      # Сущности: API-клиенты, Pinia-сторы, сервисы и модели
+├── pages/         # Страницы, собранные из блоков shared и widgets
+├── layouts/       # Шаблоны страниц (например, с меню или футером)
+├── assets/        # Медиа-ресурсы: картинки, шрифты, глобальные стили (SCSS)
+├── utils/         # Повторяющаяся логика, хелперы, валидация и утилиты
+├── plugins/       # Плагины: подключение GSAP, Three.js и др.
+├── store/         # Глобальный Pinia-стор сайта
+└── api/           # Конфигурации и обёртки для Axios
 ```
 
-Locally preview production build:
+---
+
+## 🧪 Тестовая версия
+
+Проект доступен для предварительного просмотра по адресу:
+
+🔗 **[https://pultra.kls-digital.ru](https://pultra.kls-digital.ru)**
+
+---
+
+## 🐳 Запуск проекта (Docker)
+
+Для запуска проекта в продакшн- или тестовом режиме используется `docker-compose`.
+
+### 🚀 Первый запуск:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+docker-compose up -d --build
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### 🔄 Перезапуск (без пересборки):
+
+```bash
+docker-compose up -d
+```
+
+Это запустит контейнер с актуальной версией фронтенда.
+
+---
+
+## 👨‍💻 Автор
+
+**Сабитов Данил Владиславович**  
+Fullstack-разработчик  
+
+- Telegram: [@Strelokkk](https://t.me/Strelokkk)  
+- GitHub: [github.com](https://github.com/Danil-Danya)
+
+---
+
+## 📎 Информация
+
+Проект создан по заказу студии **Digital KLS** для **завода композитных изделий**, расположенного в городе **Санкт-Петербург**.
+
+Разработка велась с упором на визуальные эффекты, анимации и современный интерфейс. Проект ориентирован на презентацию продукции и улучшение имиджа заказчика в цифровом пространстве.
+
+---
+
+> Спасибо за интерес к проекту! Если вы хотите использовать архитектурный подход FSD в своих проектах — этот репозиторий может послужить примером.
