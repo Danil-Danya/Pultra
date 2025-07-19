@@ -1,0 +1,58 @@
+.about__card {
+    display: flex;
+    max-width: 425px;
+    width: 100%;
+    padding: 20px 0;
+    gap: 10px;
+
+    @include media ($md) {
+        border-left: 1px solid ;
+    }
+
+    @include media ($xsl) {
+        max-width: 330px;
+    }
+    
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 65px;
+        position: relative;
+
+        @include media ($md) {
+            border-top: 1px solid ;
+            padding-left: 20px;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 50px;
+                border-top: 1px solid #424243;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                border-left: 1px solid transparent;
+                border-radius: 100%;
+                position: absolute;
+                top: 0;
+                left: 20px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &-title {
+        color: #D56F2D;
+        font-family: Bicubik;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 26.4px */
+        text-transform: uppercase;
+
+        @include media ($xsl) {
+            font-size: 20px
+        }
+    }
+}

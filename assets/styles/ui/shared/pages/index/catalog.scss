@@ -1,0 +1,23 @@
+.catalog {
+    background: #FFFFFF;
+
+    &__content {
+        padding: 120px 0;
+
+        @include media ($md) {
+            padding: 60px 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        @include media ($big) {
+            font-size: 64px;
+
+            @include media ($md) {
+                font-size: 32px;
+            }
+        }
+    }
+}
