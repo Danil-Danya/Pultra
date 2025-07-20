@@ -1,5 +1,5 @@
 <template>
-    <div class="blog__slider">
+    <div class="blog__slider-con">
         <div class="blog__slider-container">
             <div class="blog__slider-preview">
                 <div class="blog__slider-preview-text">

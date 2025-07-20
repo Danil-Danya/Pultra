@@ -45,6 +45,6 @@
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     @import '@/assets/styles/ui/shared/sections/consultation.scss';
 </style>

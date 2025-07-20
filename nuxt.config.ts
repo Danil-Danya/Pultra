@@ -31,6 +31,12 @@ export default defineNuxtConfig({
         }
     },
 
+    runtimeConfig: {
+        public: {
+            siteBaseURL: process.env.SITE_BASE_URL
+        }
+    },
+
 
     devtools: { enabled: true },
     modules: ['@nuxt/fonts',],

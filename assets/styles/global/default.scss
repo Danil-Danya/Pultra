@@ -53,6 +53,10 @@ section {
     font-weight: 400;
     line-height: 110%; 
     text-transform: uppercase;
+
+    @include media ($md) {
+        font-size: 32px;
+    }
 }
 
 h2 {
@@ -240,6 +244,36 @@ h4 {
     opacity: 0;
 }
 
+.blue {
+    background: #2D97D5 !important;
+}
+
+.green {
+    background: #2DD53E !important;
+}
+
+
+.Toastify__progress-bar {
+    background-color: #D56F2D !important;
+    height: 4px;
+    bottom: 0;
+    top: auto !important;
+    border-radius: 0 0 4px 4px;
+}
+
+.Toastify__toast-body  {
+    @include media ($md) {
+        font-size: 14px !important;
+        max-width: calc(100% - 24px) !important;
+    }
+}
+
+.Toastify__toast {
+    @include media ($md) {
+        font-size: 14px !important;
+        max-width: calc(100% - 24px) !important;
+    }
+}
 
 
 

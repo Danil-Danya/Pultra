@@ -1,21 +1,22 @@
 <template>
-    <div class="blog__slider-card">
-        <NuxtLink :to="link" class="blog__slider-image-link">
-            <img :src="image" alt="Превью" class="blog__slider-image">
+    <div class="blog__card">
+        <NuxtLink :to="link" class="blog__image-link">
+            <img :src="image" alt="Превью" class="blog__image">
         </NuxtLink>
-        <p class="blog__slider-card-date">{{ date }}</p>
-        <NuxtLink :to="link" class="blog__slider-title-link">
-            <h3 class="blog__slider-card-title">{{ title }}</h3>
+        <p class="blog__card-date">{{ date }}</p>
+        <NuxtLink :to="link" class="blog__title-link">
+            <h3 class="blog__card-title">{{ title }}</h3>
         </NuxtLink>
-        <p class="blog__slider-card-text">{{ text }}</p>
-        <NuxtLink :to="link" class="blog__slider-more">
-            <p class="blog__slider-button-text">читать полностью</p>
-            <span class="blog__slider-more-text">
-                <ArrowButton class="blog__slider-more-icon" />
+        <p class="blog__card-text">{{ text }}</p>
+        <NuxtLink :to="link" class="blog__more">
+            <p class="blog__button-text">читать полностью</p>
+            <span class="blog__more-text">
+                <ArrowButton class="blog__more-icon" />
             </span>
         </NuxtLink>
     </div>
 </template>
+
 
 <script setup>
 

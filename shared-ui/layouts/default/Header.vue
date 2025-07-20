@@ -48,6 +48,6 @@
     })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     @import '@/assets/styles/ui/shared/layout/header.scss';
 </style>
