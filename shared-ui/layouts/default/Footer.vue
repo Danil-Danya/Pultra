@@ -3,7 +3,7 @@
         <div class="footer__left">
             <div class="footer__logo-container">
                 <NuxtLink to="/" class="footer__logo-text">
-                    <img src="/images/logos/logo-footer.svg" alt="Логотип" class="footer__logo-img">
+                    <NuxtImg preset="default"  format="webp" src="/images/logos/logo-footer.svg" alt="Логотип" class="footer__logo-img" />
                 </NuxtLink>
             </div>
             <div class="footer__button-container">
@@ -98,10 +98,6 @@
 
     const siteLinks = ref([
         {
-            text: 'Главная',
-            link: '/'
-        },
-        {
             text: 'О компании',
             link: '/about'
         },
@@ -132,10 +128,6 @@
         {
             text: 'Сертификаты',
             link: '/certificates'
-        },
-        {
-            text: 'Статьи',
-            link: '/articles'
         },
         {
             text: 'Услуги',

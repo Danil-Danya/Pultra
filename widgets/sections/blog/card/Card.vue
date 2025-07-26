@@ -1,7 +1,7 @@
 <template>
     <div class="blog__card">
         <NuxtLink :to="link" class="blog__image-link">
-            <img :src="image" alt="Превью" class="blog__image">
+            <NuxtImg preset="default"  format="webp" :src="image" alt="Превью" class="blog__image" />
         </NuxtLink>
         <p class="blog__card-date">{{ date }}</p>
         <NuxtLink :to="link" class="blog__title-link">

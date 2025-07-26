@@ -10,7 +10,7 @@
                 </div>
                 <div class="about__content-container">
                     <div class="about__left">
-                        <img src="/images/about/about.png" alt="about" class="about__image">
+                        <NuxtImg preset="default"  format="webp" src="/images/about/about.png" alt="about" class="about__image" />
                     </div>
                     <div class="about__right">
                         <div class="about__right-content">

@@ -1,0 +1,105 @@
+.vacancies {
+    padding-bottom: 60px;
+    border-bottom: 1px solid #424243;
+
+    &__content {
+        display: flex;
+        border-top: 1px solid #424243;
+
+        @include media ($big) {
+            border: 0;
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        padding: 40px;
+        border-right: 1px solid #424243;
+        position: relative;
+
+        @include media ($big) {
+            border: 0;
+            padding: 0;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-top: 1px solid #424243;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            transform: rotate(-315deg);
+
+            @include media ($big) {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-top: 1px solid #424243;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            right: -53px;
+            transform: rotate(315deg);
+
+            @include media ($big) {
+                display: none;
+            }
+        }
+    }
+
+    &__right {
+        padding: 40px;
+        max-width: 945px;
+        width: 100%;
+
+        @include media ($big) {
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    &__text {
+        color: #424243;
+        font-family: Hauora;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 28.8px */
+        margin-bottom: 20px;
+
+        @include media ($md) {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        transition: all 300ms;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

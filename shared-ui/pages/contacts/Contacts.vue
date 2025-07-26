@@ -102,7 +102,7 @@
         toast.success(`${text} скопированно успешно`, {
             autoClose: 1000,
             icon: h('img', { 
-                src: 'images/contacts/icon.png', 
+                src: '/images/contacts/icon.png', 
                 style: 'width: 20px; height: 20px;' 
             })
         });

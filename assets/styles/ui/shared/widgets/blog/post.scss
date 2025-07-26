@@ -1,0 +1,105 @@
+.post {
+    &__text {
+        color: #424243;
+        font-family: Hauora;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 25.6px */
+        margin-bottom: 10px;
+
+        @include media ($big) {
+            font-size: 12px;
+        }
+    }
+
+    &__img {
+        max-width: 826px;
+        width: 100%;
+        max-height: 452px;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        color: #424243;
+        font-family: Bicubik;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 70.4px */
+        margin-top: 40px;
+
+        @include media ($big) {
+            font-size: 32px;
+        }
+
+        &-content {
+            color: #424243;
+            font-family: Bicubik;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%; /* 35.2px */
+            margin: 20px 0;
+
+            @include media ($big) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__list {
+        margin: 10px 0;
+        & > li > p {
+            margin: 0;
+        }
+
+        & > li {
+            list-style: decimal;
+            margin-left: 30px;
+        }
+    }
+
+    &__data {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        &-list {
+            display: flex;
+            gap: 100px;
+
+            @include media ($md) {
+                gap: 30px;
+            }
+
+            @include media ($md) {
+                justify-content: start;
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+            }
+        }
+
+        &-li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &-text {
+            color: #424243;
+            font-family: Bicubik;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+
+            @include media ($big) {
+                font-size: 12px;
+            }
+        }
+    }
+}

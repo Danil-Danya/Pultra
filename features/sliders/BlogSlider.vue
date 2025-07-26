@@ -3,7 +3,7 @@
         <div class="blog__slider-container">
             <div class="blog__slider-preview">
                 <div class="blog__slider-preview-text">
-                    <h2 class="blog__title title">Полезные статьи</h2>
+                    <h2 class="blog__title title">{{ title }}</h2>
                 </div>
                 <div class="blog__slider-preview-button">
                     <button class="blog__slider-button blog__slider-button-prev">
@@ -89,6 +89,13 @@
         title: 'Компания завершила обследование и проектирование кабельных трасс здании ПМУ',
         text: 'Учитывая сильноагрессивную среду в здании, замена кабельных трасс на стеклопластиковые лотки позволит заказчику навсегда вычеркнуть статью расходов, связанную с остановкой цеха и замены лотков. Служба эксплуатации не будет постоянно устранять аварии и станет работать в стандартном режиме. ',
         link: '#'
+    })
+
+    const props = defineProps({
+        title: {
+            type: String,
+            default: 'Полезные статьи'
+        }
     })
 
     const onSwiper = (swiper) => {

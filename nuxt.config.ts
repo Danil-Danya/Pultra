@@ -39,16 +39,39 @@ export default defineNuxtConfig({
 
 
     devtools: { enabled: true },
-    modules: ['@nuxt/fonts',],
+    modules: ['@nuxt/fonts', '@nuxt/image'],
+
+    image: {
+        provider: 'ipx',
+        format: 'webp',
+        //domains: ['pultra.kls-digital.ru'],
+        screens: {
+            xs: 320,
+            sm: 640,
+            md: 768,
+            lg: 1024,
+            xl: 1280,
+            xxl: 1536
+        },
+        presets: {
+            default: {
+                sizes: 'xs:100vw sm:100vw md:50vw lg:33vw xl:25vw'
+            }
+        }
+    },
 
     css: [
         '@/assets/styles/main.scss'
     ],
 
+    serverMiddleware: [
+        { path: '/', handler: '~/server/middleware/compression.js' }
+    ],
+
     vite: {
         //plugins: [compression()],
         build: {
-            minify: 'esbuild',
+            minify: 'terser',
             terserOptions: {
                 compress: {
                     drop_console: true,

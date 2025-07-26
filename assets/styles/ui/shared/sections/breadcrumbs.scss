@@ -3,6 +3,11 @@
         display: flex;
         gap: 30px;
         margin: 42px 0;
+
+        @include media ($md) {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
     }
 
     &__link {
@@ -23,17 +28,24 @@
     &__li {
         position: relative;
         font-family: Hauora;
-        font-size: 16px;
+        font-size: 16pxb !important;
         color: rgba(66, 66, 67, 0.40);
+        display: flex;
+        align-items: center;
+        gap: 20px;
 
-        &::after {
-            content: '■';
-            display: inline-block;
-            margin: 0 11px;
-            color: inherit;
-            position: absolute;
-            top: -2px;
+        @include media ($md) {
+            gap: 10px;
         }
+
+        // &::after {
+        //     content: '■';
+        //     display: inline-block;
+        //     margin: 0 11px;
+        //     color: inherit;
+        //     position: absolute;
+        //     top: -2px;
+        // }
         
         &:last-of-type::after {
             display: none;

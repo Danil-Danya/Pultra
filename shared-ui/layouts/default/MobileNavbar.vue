@@ -12,7 +12,7 @@
                         </div>
                         <div class="logo">
                             <a href="/" class="navbar__logo-link">
-                                <img loading="lazy"  src="@/assets/images/logos/logo.svg" alt="Логотип" class="navbar__logo-img">
+                                <NuxtImg preset="default"  format="webp" loading="lazy"  src="images/logos/logo.svg" alt="Логотип" class="navbar__logo-img" />
                             </a>
                         </div>
                     </div>

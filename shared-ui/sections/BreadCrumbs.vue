@@ -13,6 +13,7 @@
                     >
                         {{ link.text }}
                     </NuxtLink>
+                    <span class="breadcrumbs__el" v-if="index !== breadCrumbsList.length - 1">></span>
                 </li>
             </ul>
         </div>

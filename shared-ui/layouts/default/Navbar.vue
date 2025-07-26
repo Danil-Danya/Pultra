@@ -5,7 +5,7 @@
                 <div class="navbar__left">
                     <div class="logo">
                         <a href="/" class="navbar__logo-link">
-                            <img loading="lazy"  src="@/assets/images/logos/logo.svg" alt="Логотип" class="navbar__logo-img">
+                            <NuxtImg preset="default"  format="webp" loading="lazy" src="images/logos/logo.svg" alt="Логотип" class="navbar__logo-img" />
                         </a>
                     </div>
                     <nav class="nav">
@@ -92,7 +92,7 @@
             subListShow: false,
             subList: [
                 { text: 'О компании', link: '/about' },
-                { text: 'Карьера', link: '/career' },
+                { text: 'Карьера', link: '/vacancies' },
                 { text: 'Документация', link: '/docs' },
                 { text: 'Сертификаты', link: '/certificates' },
                 { text: 'Сотрудничество', link: '/cooperation' },

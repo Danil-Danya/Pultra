@@ -1,7 +1,7 @@
 <template>
     <div class="about__card">
         <div class="about__card-left">
-            <img :src="icon" alt="Иконка" class="about__card-icon">
+            <NuxtImg preset="default"  format="webp" :src="icon" alt="Иконка" class="about__card-icon" />
         </div>
         <div class="about__card-right">
             <h3 class="about__card-title">{{ title }}</h3>

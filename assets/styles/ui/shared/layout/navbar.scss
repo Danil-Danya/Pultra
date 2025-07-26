@@ -132,6 +132,9 @@
 
     &__logo {
         &-img {
+            width: 145px;
+            height: 76px;
+
             @include media ($xsl) {
                 width: 80px;
                 height: 40px;

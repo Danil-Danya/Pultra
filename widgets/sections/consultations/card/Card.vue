@@ -2,7 +2,7 @@
     <div class="consultation__card">
         <div class="consultation__card-content">
             <div class="consultation__card-left">
-                <img :src="image" alt="Иконка" format="webp" class="consultation__card-icon">
+                <NuxtImg preset="default"  format="webp" :src="image" alt="Иконка" class="consultation__card-icon" />
             </div>
             <div class="consultation__card-right">
                 <h3 class="consultation__card-title">{{ title }}</h3>

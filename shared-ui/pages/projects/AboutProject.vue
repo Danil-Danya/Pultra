@@ -8,7 +8,7 @@
                     <p class="about__project-text">Мы рады, что смогли внести свой вклад в развитие различных отраслей, обеспечив надёжные и своевременные поставки композитных изделий. Наши проекты — это примеры того, как современные технологии и индивидуальный подход помогают достигать поставленных целей и воплощать в жизнь самые амбициозные идеи.</p>
                 </div>
                 <div class="about__project-right">
-                    <img src="/images/project/index/project.png" alt="Проект" class="about__project-img">
+                    <NuxtImg preset="default"  format="webp" src="/images/project/index/project.png" alt="Проект" class="about__project-img" />
                 </div>
             </div>
         </div>

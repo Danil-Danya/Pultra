@@ -21,7 +21,7 @@
                 :key="index"
                 class="project__swiper-slide swiper-slide"
             >
-                <img :src="image" alt="Компания партнёр" class="project__swiper-image">
+                <NuxtImg preset="default"  format="webp" :src="image" alt="Компания партнёр" class="project__swiper-image" />
             </SwiperSlide>
 
             <div class="project__swiper-pagination swiper-pagination"></div>
@@ -57,7 +57,7 @@
     }
 
     const partnersLogoList = ref([
-        'images/partners/logo.png',
+        'images/partners/logo.svg',
         'images/partners/logo-1.png',
         'images/partners/logo-2.png',
         'images/partners/logo-3.png',

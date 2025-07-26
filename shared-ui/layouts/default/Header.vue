@@ -2,7 +2,7 @@
     <section class="header__content">
         <div class="container">
             <div class="header__image-container">
-                <img src="/images/header/header-bg.png" alt="Задний фон" class="header__image-img" ref="image">
+                <img src="/images/header/header-bg.webp" alt="Задний фон" class="header__image-img" ref="image" loading="eager" fetchpriority="high">
             </div>
             <div class="header__content-container">
                 <div class="header__text-container">

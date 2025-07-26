@@ -1,0 +1,22 @@
+.vacancies__section {
+    padding: 120px 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid #424243;
+
+    @include media ($big) {
+        padding: 60px 0
+    }
+
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include media ($big) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media ($md) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

@@ -3,14 +3,14 @@
         <div class="catalog__card-content">
             <div class="catalog__card-image">
                 <NuxtLink :to="link" class="catalog__card-img-link">
-                    <img :src="image" alt="Карточка" class="catalog__card-image-img">
+                    <NuxtImg preset="default"  format="webp" :src="image" alt="Карточка" class="catalog__card-image-img" />
                 </NuxtLink>
             </div>
             <div class="catalog__card-recommendation" v-if="recommends && recommends.length > 0">
                 <ul class="catalog__card-list" v-for="recommend in recommends" :key="recommend">
                     <li class="catalog__card-li" v-for="link in recommend.images" :key="link">
                         <NuxtLink to="#" class="catalog__card-links">
-                            <img :src="link.image" alt="Ссылка" class="catalog__card-links-img">
+                            <NuxtImg preset="default"  format="webp" :src="link.image" alt="Ссылка" class="catalog__card-links-img" />
                         </NuxtLink>
                     </li>
                     <li class="catalog__card-li" v-if="recommend.lastCount">
