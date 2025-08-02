@@ -1,0 +1,18 @@
+.parameters {
+    padding: 120px 0;
+    background: #FFFFFF;
+
+    @include media ($md) {
+        padding: 60px 0;
+    }
+
+    &__content {
+        @include media ($big) {
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.breadcrumbs {
+    &__list {
+        display: flex;
+        gap: 30px;
+        margin: 42px 0;
+
+        @include media ($md) {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+
+    &__link {
+        color: rgba(66, 66, 67, 0.40);
+        font-family: Hauora;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 128%; /* 20.48px */
+        position: relative;
+
+        &.bold {
+            font-weight: 700;
+            color: #000000;
+        }
+    }
+
+    &__li {
+        position: relative;
+        font-family: Hauora;
+        font-size: 16pxb !important;
+        color: rgba(66, 66, 67, 0.40);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include media ($md) {
+            gap: 10px;
+        }
+
+        // &::after {
+        //     content: '■';
+        //     display: inline-block;
+        //     margin: 0 11px;
+        //     color: inherit;
+        //     position: absolute;
+        //     top: -2px;
+        // }
+        
+        &:last-of-type::after {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.whatsapp__form {
+    &-content {
+        &-container {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+
+            @include media ($md) {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    &-input {
+        &-container {
+            width: 50%;
+
+            @include media ($md) {
+                width: 100%;
+            }
+        }
+    }
+
+    
+
+    &-confirm {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+
+        &-p {
+            color: #FFF;
+            font-family: Hauora;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            @include media ($md) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

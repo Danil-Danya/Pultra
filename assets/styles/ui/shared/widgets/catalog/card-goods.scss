@@ -1,0 +1,86 @@
+.goods__card {
+    border: 1px solid #424243;
+    border-top: 0;
+    padding: 10px;
+
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+        border-top: 1px solid #424243;
+    }
+
+    &:nth-of-type(2) {
+        @include media ($xl) {
+            border-top: 0;
+        }
+    }
+
+    &:nth-of-type(2n) {
+        border-left: 0;
+
+        @include media ($xl) {
+            border-left: 1px solid #424243;
+        }
+    }
+
+    &-content {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &-left {
+        gap: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    &-title {
+        color: #424243;
+        font-family: Bicubik;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 35.2px */
+        text-transform: uppercase;
+
+        @include media ($md) {
+            font-size: 24px;
+        }
+
+        @include media ($sm) {
+            font-size: 18px;
+        }
+
+        @include media ($xs) {
+            font-size: 14px;
+        }
+    }
+
+    &-img {
+        width: 180px;
+        height: 180px;
+
+        @include media ($md) {
+            width: 120px;
+            height: 120px;
+        }
+
+        @include media ($sm) {
+            width: 90px;
+            height: 90px;
+        }
+
+        @include media ($xs) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &-button {
+        padding: 30px;
+
+        @include media ($md) {
+            padding: 15px;
+        }
+    }
+}
