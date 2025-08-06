@@ -17,7 +17,7 @@ const animateAbout = () => {
         scrollTrigger: {
             trigger: title,
             start: 'top 90%',
-            markers: true,
+            markers: false,
             toggleActions: 'play none none none'
         }
     })
@@ -33,7 +33,7 @@ const animateAbout = () => {
         scrollTrigger: {
             trigger: aboutLeft,
             start: 'top 75%',
-            markers: true,
+            markers: false,
             toggleActions: 'play none none none'
         }
     })
@@ -48,7 +48,7 @@ const animateAbout = () => {
         ease: 'power2.out',
         scrollTrigger: {
             trigger: aboutRight,
-            markers: true,
+            markers: false,
             start: 'top 75%',
             toggleActions: 'play none none none'
         }

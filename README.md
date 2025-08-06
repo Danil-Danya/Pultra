@@ -1,5 +1,5 @@
 <p align="center">
-  <NuxtImg preset="default"  format="webp" src="https://pultra.kls-digital.ru/images/logos/logo-footer.png" alt="Pultra Logo" height="100" />
+  <NuxtImg  loading="lazy"  preset="default"  format="webp" src="https://pultra.kls-digital.ru/images/logos/logo-footer.png" alt="Pultra Logo" height="100" />
 </p>
 
 # Pultra — сайт завода композитных изделий

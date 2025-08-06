@@ -15,7 +15,7 @@ const animateProject = () => {
         scrollTrigger: {
             trigger: title,
             start: 'top 90%',
-            markers: true,
+            markers: false,
             toggleActions: 'play none none none'
         }
     })
@@ -32,7 +32,7 @@ const animateProject = () => {
             scrollTrigger: {
                 trigger: card,
                 start: 'top 85%',
-                markers: true,
+                markers: false,
                 toggleActions: 'play none none none'
             }
         })

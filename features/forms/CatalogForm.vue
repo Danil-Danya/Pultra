@@ -2,7 +2,7 @@
     <form class="catalog__form catalog__card">
         <div class="catalog__form-container">
             <div class="catalog__form-info">
-                <NuxtImg preset="default"  format="webp" src="/images/catalog/form/ph.png" alt="Картинка" />
+                <NuxtImg  loading="lazy"  preset="default"  format="webp" src="/images/catalog/form/ph.png" alt="Картинка" />
                 <h3 class="catalog__form-title">Отправим каталог продукции на <span class="green">WhatsApp</span></h3>
             </div>
             <div class="catalog__form-content">

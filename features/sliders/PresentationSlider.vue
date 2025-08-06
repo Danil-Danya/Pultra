@@ -19,7 +19,7 @@
                 }"
             >
                 <SwiperSlide class="presentation__slider-slide" v-for="item in 10" :key="item">
-                    <NuxtImg class="presentation__slider-img" src="/images/presentation/ph.png" alt="Слайдер картинка" format="webp" />
+                    <NuxtImg  loading="lazy"  class="presentation__slider-img" src="/images/presentation/ph.png" alt="Слайдер картинка" format="webp" />
                 </SwiperSlide>
             </Swiper>
             <div class="presentation__slider-navigation">
@@ -29,16 +29,16 @@
                     </span>
                 </button>
                 <button class="presentation__slider-button" v-for="(item, index) in 4" :key="item" ref="slides" @click="toggleActiveSlide(index)">
-                    <NuxtImg class="presentation__slider-button-img" src="/images/presentation/ph.png" alt="Слайдер картинка" format="webp" />
+                    <NuxtImg  loading="lazy"  class="presentation__slider-button-img" src="/images/presentation/ph.png" alt="Слайдер картинка" format="webp" />
                 </button>
                 <button class="presentation__slider-button" @click="show3DModal">
-                    <NuxtImg class="presentation__slider-button-img" src="/images/presentation/ph.png" alt="Слайдер картинка" format="webp" />
+                    <NuxtImg  loading="lazy"  class="presentation__slider-button-img" src="/images/presentation/ph.png" alt="Слайдер картинка" format="webp" />
                     <span class="presentation__slider-button-icon-absolute">
                         <ThreeDIcon />
                     </span>
                 </button>
                 <button class="presentation__slider-button" @click="showVideoModal">
-                    <NuxtImg class="presentation__slider-button-img" src="/images/presentation/ph.png" alt="Слайдер картинка" format="webp" />
+                    <NuxtImg  loading="lazy"  class="presentation__slider-button-img" src="/images/presentation/ph.png" alt="Слайдер картинка" format="webp" />
                     <span class="presentation__slider-button-icon-absolute">
                         <VideoIcon />
                     </span>

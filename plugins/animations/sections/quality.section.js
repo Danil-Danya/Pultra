@@ -19,7 +19,7 @@ const animateQuality = () => {
             scrollTrigger: {
                 trigger: infoLeft,
                 start: 'top 90%',
-                markers: true,
+                markers: false,
                 toggleActions: 'play none none none'
             }
         })
@@ -35,7 +35,7 @@ const animateQuality = () => {
             scrollTrigger: {
                 trigger: infoRight,
                 start: 'top 90%',
-                markers: true,
+                markers: false,
                 toggleActions: 'play none none none'
             }
         })
@@ -51,7 +51,7 @@ const animateQuality = () => {
             scrollTrigger: {
                 trigger: presentationLeft,
                 start: 'top 90%',
-                markers: true,
+                markers: false,
                 toggleActions: 'play none none none'
             }
         })
@@ -67,7 +67,7 @@ const animateQuality = () => {
             scrollTrigger: {
                 trigger: presentationRight,
                 start: 'top 90%',
-                markers: true,
+                markers: false,
                 toggleActions: 'play none none none'
             }
         })

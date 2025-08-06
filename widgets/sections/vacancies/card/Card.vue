@@ -1,7 +1,7 @@
 <template>
     <div class="vacancies__card">
         <div class="vacancies__card-image-container">
-            <NuxtImg :src="image" alt="Вакансия" format="webp" class="vacancies__card-img" />
+            <NuxtImg  loading="lazy"  :src="image" alt="Вакансия" format="webp" class="vacancies__card-img" />
         </div>
         <div class="vacancies__card-text-container">
             <h3 class="vacancies__card-title">{{ title }}</h3>

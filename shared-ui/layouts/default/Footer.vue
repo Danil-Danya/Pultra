@@ -3,7 +3,7 @@
         <div class="footer__left">
             <div class="footer__logo-container">
                 <NuxtLink to="/" class="footer__logo-text">
-                    <NuxtImg preset="default"  format="webp" src="/images/logos/logo-footer.svg" alt="Логотип" class="footer__logo-img" />
+                    <NuxtImg  loading="lazy"  preset="default"  format="webp" src="/images/logos/logo-footer.svg" alt="Логотип" class="footer__logo-img" />
                 </NuxtLink>
             </div>
             <div class="footer__button-container">

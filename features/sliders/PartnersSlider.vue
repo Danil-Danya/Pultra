@@ -21,7 +21,7 @@
                 :key="index"
                 class="project__swiper-slide swiper-slide"
             >
-                <NuxtImg preset="default" format="webp" :src="image" alt="Компания партнёр" class="project__swiper-image" />
+                <NuxtImg  loading="lazy"  preset="default" format="webp" :src="image" alt="Компания партнёр" class="project__swiper-image" />
             </SwiperSlide>
 
             <div class="project__swiper-pagination swiper-pagination"></div>

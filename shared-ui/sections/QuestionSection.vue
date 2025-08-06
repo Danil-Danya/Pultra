@@ -7,14 +7,14 @@
                 </div>
                 <div class="question__right">
                     <div class="question__info">
-                        <NuxtImg preset="default"  src="/images/questions/content.png" alt="Элемент" class="question__info-img" format="webp" />
+                        <NuxtImg  loading="lazy"  preset="default"  src="/images/questions/content.png" alt="Элемент" class="question__info-img" format="webp" />
                         <div class="question__info-content">
                             <h3 class="question__info-title">Иванов А.А.</h3>
                             <p class="question__info-text">Руководитель</p>
                         </div>
                     </div>
                     <div class="question__image">
-                        <NuxtImg preset="default"  src="/images/questions/director.png" alt="director" class="question__image-img" format="webp" />
+                        <NuxtImg  loading="lazy"  preset="default"  src="/images/questions/director.png" alt="director" class="question__image-img" format="webp" />
                     </div>
                 </div>
             </div>

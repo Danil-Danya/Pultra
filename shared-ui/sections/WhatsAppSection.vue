@@ -3,7 +3,7 @@
         <div class="container">
             <div class="whatsapp__container">
                 <div class="whatsapp__left">
-                    <NuxtImg class="whatsapp__img" src="/images/whatsapp/ph.png" alt="Картинка" format="webp" />
+                    <NuxtImg  loading="lazy"  class="whatsapp__img" src="/images/whatsapp/ph.png" alt="Картинка" format="webp" />
                     <h2 class="whatsapp__title">Отправим каталог продукции на <span>WhatsApp</span></h2>
                 </div>
                 <div class="whatsapp__right">

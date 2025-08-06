@@ -5,7 +5,7 @@
                 <div class="navbar__left">
                     <div class="logo">
                         <a href="/" class="navbar__logo-link">
-                            <NuxtImg preset="default"  format="webp" loading="lazy" src="images/logos/logo.svg" alt="Логотип" class="navbar__logo-img" />
+                            <NuxtImg  loading="lazy"  preset="default"  format="webp" src="images/logos/logo.svg" alt="Логотип" class="navbar__logo-img" />
                         </a>
                     </div>
                     <nav class="nav">

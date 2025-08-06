@@ -1,4 +1,10 @@
 .presentation__slider {
+    //border: 1px solid #424243;
+
+    &-slide {
+         border: 1px solid #424243;
+    }
+
     &-navigation {
         display: flex;
 
@@ -18,12 +24,19 @@
     }
     
     &-button {
+        all: unset; 
         width: 80px;
         height: 80px;
         aspect-ratio: 1/1;
         position: relative;
         margin-top: 10px;
         cursor: pointer;
+        border-radius: 0 !important;
+        -webkit-appearance: none; 
+        border: 1px solid #424243;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         @include media ($big) {
             width: 50px;

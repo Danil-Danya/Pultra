@@ -4,7 +4,7 @@
             <h2 class="title about__section-title">о компании</h2>
             <div class="about__section-content">
                 <div class="about__section-left">
-                    <NuxtImg src="/images/about/ph.png" alt="О компании"  class="about__section-img"></NuxtImg>
+                    <NuxtImg  loading="lazy"  src="/images/about/ph.png" alt="О компании"  class="about__section-img"></NuxtImg>
                 </div>
                 <div class="about__section-right">
                     <h1 class="title about__title">

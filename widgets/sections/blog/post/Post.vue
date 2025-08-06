@@ -12,7 +12,7 @@
         </div>
         <div class="post__content">
             <div class="post__head">
-                <NuxtImg class="post__img" format="webp" :src="post.head.image" alt="Картинка поста" />
+                <NuxtImg  loading="lazy"  class="post__img" format="webp" :src="post.head.image" alt="Картинка поста" />
                 <p class="post__text" v-for="text in post.head.text" :key="text">{{ text }}</p>
             </div>
             <div class="post__subhead">

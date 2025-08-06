@@ -1,7 +1,7 @@
 <template>
     <div class="project__card">
         <div class="project__card-image">
-            <NuxtImg preset="default"  format="webp" :src="image" alt="Превью" />
+            <NuxtImg  loading="lazy"  preset="default"  format="webp" :src="image" alt="Превью" />
         </div>
         <div class="project__card-content">
             <p class="project__card-date">{{ date }}</p>

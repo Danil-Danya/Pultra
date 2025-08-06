@@ -5,13 +5,13 @@
                 <h2 class="mission__title">Ценности которых <span class="mission__title-orange">мы</span> придерживаемся</h2>
                 <div class="mission__content-container">
                     <div class="mission__content-item" v-for="item in missionValues" :key="item">
-                        <NuxtImg class="mission__icon" :src="item.icon" alt="Иконка" format="webp" />
+                        <NuxtImg  loading="lazy"  class="mission__icon" :src="item.icon" alt="Иконка" format="webp" />
                         <p class="mission__content-text">{{ item.text }}</p>
                     </div>
                 </div>
             </div>
             <div class="mission__content-right">
-                <NuxtImg class="mission__img" src="/images/about/mission/ph.png" alt="Картинка" format="webp" />
+                <NuxtImg  loading="lazy"  class="mission__img" src="/images/about/mission/ph.png" alt="Картинка" format="webp" />
             </div>
         </div>
         <div class="mission__slogan">

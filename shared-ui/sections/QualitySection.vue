@@ -20,7 +20,7 @@
                 <div class="container">
                     <div class="quality__presentation-inner">
                         <div class="quality__presentation-left">
-                            <NuxtImg preset="default"  format="webp" src="/images/quality/quality.png" alt="Картинка" class="quality__presentation-img" />
+                            <NuxtImg  loading="lazy"  preset="default"  format="webp" src="/images/quality/quality.png" alt="Картинка" class="quality__presentation-img" />
                         </div>
                         <div class="quality__presentation-right">
                             <QualityForm />

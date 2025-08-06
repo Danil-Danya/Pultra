@@ -2,7 +2,7 @@
     <div class="item__card">
         <NuxtLink :to="link" class="item__card-content">
             <div class="item__card-left">
-                <NuxtImg class="item__card-img" :src="image" alt="Категория" format="webp" />
+                <NuxtImg  loading="lazy"  class="item__card-img" :src="image" alt="Категория" format="webp" />
                 <h4 class="item__card-title">{{ title }}</h4>
             </div>
 

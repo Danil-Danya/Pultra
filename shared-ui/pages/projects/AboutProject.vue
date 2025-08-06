@@ -13,7 +13,7 @@
                     </p>
                 </div>
                 <div class="about__project-right">
-                    <NuxtImg
+                    <NuxtImg  loading="lazy" 
                         preset="default"
                         format="webp"
                         src="/images/project/index/project.png"

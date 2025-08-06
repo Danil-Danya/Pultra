@@ -15,7 +15,7 @@ const animateCatalog = () => {
         scrollTrigger: {
             trigger: title,
             start: 'top 90%', 
-            markers: true,
+            markers: false,
             toggleActions: 'play none none none'
         }
     })
@@ -31,7 +31,7 @@ const animateCatalog = () => {
             ease: 'power2.out',
             scrollTrigger: {
                 trigger: card,
-                markers: true,
+                markers: false,
                 start: 'top 100%',
                 toggleActions: 'play none none none'
             }

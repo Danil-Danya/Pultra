@@ -1,12 +1,11 @@
 <template>
     <BreadCrumbs :breadCrumbsList="breadCrumbsList" />
+    <ServicesAbout />
 </template>
 
 <script setup>
     import BreadCrumbs from '@/shared-ui/sections/BreadCrumbs.vue';
-    import Content from '@/shared-ui/pages/about/Content.vue'
-    import About from '@/shared-ui/pages/about/About.vue';
-
+    import ServicesAbout from '@/shared-ui/pages/services/ServicesAbout.vue';
 
     const breadCrumbsList = ref([
         {
@@ -15,7 +14,7 @@
         },
         {
             link: '/sevices',
-            text: 'Услуги'
+            text: 'Услуги проектировщикам'
         }
     ])
 

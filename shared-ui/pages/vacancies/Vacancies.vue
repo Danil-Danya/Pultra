@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="vacancies__container">
-                <NuxtImg src="/images/vacancies/ph.png" alt="Вакансии" format="webp" class="vacancies__img" />
+                <NuxtImg  loading="lazy"  src="/images/vacancies/ph.png" alt="Вакансии" format="webp" class="vacancies__img" />
             </div>
         </div>
     </section>

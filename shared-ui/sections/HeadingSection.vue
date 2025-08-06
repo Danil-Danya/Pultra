@@ -3,7 +3,7 @@
         <div class="container">
             <div class="heading__content">
                 <div class="heading__left">
-                    <NuxtImg class="heading__img" src="/images/heading/ph.png" alt="Картинка" format="webp" />
+                    <NuxtImg  loading="lazy"  class="heading__img" src="/images/heading/ph.png" alt="Картинка" format="webp" />
                     <div class="heading__button-container">
                         <Button 
                             v-for="button in buttons"

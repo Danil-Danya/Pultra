@@ -44,8 +44,8 @@ export default defineNuxtConfig({
 
     image: {
         provider: 'ipx',
-        format: 'webp',
-        //domains: ['pultra.kls-digital.ru'],
+        formats: ['webp'],
+        domains: ['pultra.kls-digital.ru'],
         screens: {
             xs: 320,
             sm: 640,

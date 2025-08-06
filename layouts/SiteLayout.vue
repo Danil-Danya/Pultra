@@ -1,7 +1,7 @@
 <template>
     <header class="header">
-        <Navbar v-show="!isMobile"/>
-        <MobileNavbar v-show="isMobile" />
+        <Navbar v-if="!isMobile"/>
+        <MobileNavbar v-else />
     </header>
     <main class="main">
         <NuxtPage :key="$route.fullPath" />

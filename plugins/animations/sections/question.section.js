@@ -16,7 +16,7 @@ const animateQuestion = () => {
             scrollTrigger: {
                 trigger: questionLeft,
                 start: 'top 80%',
-                markers: true,
+                markers: false,
                 toggleActions: 'play none none none'
             }
         })
@@ -32,7 +32,7 @@ const animateQuestion = () => {
             scrollTrigger: {
                 trigger: questionRight,
                 start: 'top 80%',
-                markers: true,
+                markers: false,
                 toggleActions: 'play none none none'
             }
         })

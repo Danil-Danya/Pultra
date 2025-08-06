@@ -8,7 +8,7 @@
                             <h3 class="information__title">Pultra — завод композитных изделий из стеклопластика</h3>
                             <p class="information__text">Компания Pultra — передовая стеклопластиковая компания и один из ведущих производителей стеклопластиковых профилей в России. Наш завод композитных изделий сочетает передовые технологии, высококвалифицированных специалистов и строгий контроль качества, предлагая заказчикам надёжные композитные изделия по конкурентной цене.</p>
                             <p class="information__text">Мы специализируемся на изготовлении изделий из композитных материалов, применяя инновационные композитные технологии, такие как пултрузия стеклокомпозитов. Благодаря уникальным свойствам материала, наши изделия находят широкое применение в различных отраслях промышленности.</p>
-                            <NuxtImg preset="default"  format="webp" src="/images/information/zavod.png" alt="Фасад завода и производственные цеха Pultra" class="information__image" />
+                            <NuxtImg  loading="lazy"  preset="default"  format="webp" src="/images/information/zavod.png" alt="Фасад завода и производственные цеха Pultra" class="information__image" />
                         </div>
                         <div class="information__block">
                             <h4 class="information__title mini">Почему выбирают завод композитных полимерных изделий Pultra?</h4>
@@ -27,7 +27,7 @@
                                     <p class="information__text">Возможность заказать индивидуальное изготовление изделий из композитных материалов по вашим чертежам.</p>
                                 </li>
                             </ol>
-                            <NuxtImg preset="default"  format="webp" src="/images/information/rabota.png" alt="Рабочий процесс на заводе, линия пултрузии" class="information__image" />
+                            <NuxtImg  loading="lazy"  preset="default"  format="webp" src="/images/information/rabota.png" alt="Рабочий процесс на заводе, линия пултрузии" class="information__image" />
                             <p class="information__text">Наше предприятие обладает богатым опытом производства композитов и постоянно совершенствует технологии и оборудование. Мы внимательно подходим к каждому проекту, учитывая потребности и пожелания заказчика.</p>
                         </div>
                         <div class="information__block">
@@ -50,7 +50,7 @@
                                 </li>
                             </ol>
                             <p class="information__text">Кроме стандартных изделий, завод Pultra разрабатывает и производит индивидуальные решения, отвечающие специфическим требованиям заказчиков из разных отраслей промышленности.</p>
-                            <NuxtImg preset="default"  format="webp" src="/images/information/materialy.png" alt="Продукция Pultra, различные виды профилей и панелей" class="information__image" />
+                            <NuxtImg  loading="lazy"  preset="default"  format="webp" src="/images/information/materialy.png" alt="Продукция Pultra, различные виды профилей и панелей" class="information__image" />
                         </div>
                         <div class="information__block">
                             <h4 class="information__title mini">Применение композитов в строительстве</h4>
@@ -61,7 +61,7 @@
                             <h4 class="information__title mini">Индивидуальные решения и производство на заказ</h4>
                             <p class="information__text">Наш завод предлагает производство стеклопластика и изготовление композитных изделий под ключ. Мы осуществляем комплексный подход к реализации каждого проекта: от разработки и проектирования до производства и поставки готовой продукции.</p>
                             <p class="information__text">Команда специалистов Pultra готова помочь вам выбрать оптимальный материал и конструктивные решения для вашего проекта. Мы предлагаем техническую консультацию и сопровождение на всех этапах сотрудничества.</p>
-                            <NuxtImg preset="default"  format="webp" src="/images/information/documentacia.png" alt="Проектирование и техническая документация" class="information__image" />
+                            <NuxtImg  loading="lazy"  preset="default"  format="webp" src="/images/information/documentacia.png" alt="Проектирование и техническая документация" class="information__image" />
                         </div>
                         <div class="information__block">
                             <h4 class="information__title mini">Преимущества сотрудничества с Pultra</h4>
@@ -81,7 +81,7 @@
                         <div class="information__block">
                             <h4 class="information__title mini">Надежность и проверенное качество</h4>
                             <p class="information__text">На нашем заводе внедрена строгая система контроля качества, что позволяет гарантировать соответствие продукции самым высоким стандартам. Мы тщательно следим за каждым этапом производства, от входного контроля сырья до отгрузки готовой продукции.</p>
-                            <NuxtImg preset="default"  format="webp" src="/images/information/laboratoria.png" alt="Лаборатория контроля качества на заводе Pultra" class="information__image" />
+                            <NuxtImg  loading="lazy"  preset="default"  format="webp" src="/images/information/laboratoria.png" alt="Лаборатория контроля качества на заводе Pultra" class="information__image" />
                             <p class="information__text">Закажите композитные изделия прямо сейчас и убедитесь в преимуществах сотрудничества с лидером отрасли! Свяжитесь с нами, чтобы купить композитный материал высокого качества от компании Pultra.</p>
                         </div>
                     </div>
