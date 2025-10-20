@@ -1,0 +1,55 @@
+.item__card {
+    border: 1px solid #424243;
+    border-bottom: 0;
+    transition: all 300ms;
+
+    &-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    &:hover {
+        background: #c9c9c9;
+    }
+
+    &:last-of-type {
+        border-bottom: 1px solid #424243;
+    }
+
+    &-content {
+        padding: 10px;
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    &-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &-title {
+        color: #424243;
+        font-family: Bicubik;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 26.4px */
+        text-transform: uppercase;
+
+        @include media ($md) {
+            font-size: 14px;
+        }
+    }
+
+    &-button {
+        padding: 30px;
+        cursor: pointer;
+
+        @include media ($md) {
+            padding: 10px
+        }
+    }
+}

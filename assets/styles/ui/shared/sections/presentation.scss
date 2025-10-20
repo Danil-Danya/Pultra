@@ -1,0 +1,194 @@
+.presentation {
+    padding-bottom: 120px;
+    border-bottom: 1px solid #424243;
+
+    @include media ($big) {
+        padding-bottom: 60px;
+    }
+
+    &__title {
+        font-size: 64px;
+        margin-bottom: 24px;
+
+        @include media ($big) {
+            font-size: 38px;
+        }
+
+        @include media ($md) {
+            font-size: 32px;
+            margin-top: 24px;
+        }
+
+        & > span {
+            color: #D56F2D;
+        }
+    }
+
+    &__content {
+        display: flex;
+        border-top: 1px solid #424243;
+
+        @include media ($lg) {
+            flex-direction: column;
+            border: 0;
+        }
+    }
+
+    &__left {
+        width: 50%;
+        padding: 40px;
+        border-right: 1px solid #424243;
+        position: relative;
+
+        @include media ($lg) {
+            width: 100%;
+            border: 0;
+            padding: 20px;
+            order: 2;
+        }
+
+        @include media ($md) {
+            padding: 0;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-top: 1px solid #424243;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: rotate(45deg);
+
+            // @include media ($big) {
+            //     border: 0;
+            //     //bottom: 0;
+            // }
+
+            @include media ($lg) {
+                border: 0;
+            }
+
+            @include media ($md) {
+                padding: 0;
+                border: 0;
+            }
+        }
+    }
+
+    &__right {
+        width: 50%;
+        padding: 40px;
+        position: relative;
+
+        @include media ($lg) {
+            padding: 20px;
+            border: 0;
+            width: 100%;
+        }
+
+        @include media ($md) {
+            padding: 0;
+        }
+
+
+        &::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-top: 1px solid #424243;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-45deg);
+
+            // @include media ($big) {
+            //     border: 0;
+            //     //bottom: 0;
+            // }
+
+            @include media ($lg) {
+                border: 0;
+            }
+
+            @include media ($md) {
+                border: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    &__text {
+        &-container {
+            color: #424243 !important;
+            font-family: Hauora !important;
+            font-size: 18px !important;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; 
+            margin-bottom: 10px;
+
+            @include media ($big) {
+                font-size: 14px !important;
+            }
+        }
+
+        color: #424243 !important;
+        font-family: Hauora !important;
+        font-size: 18px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; 
+        margin-bottom: 10px;
+
+        @include media ($big) {
+            font-size: 14px !important;
+        }
+    }
+
+    &__button {
+        width: 50%;
+        outline: 0;
+        margin-top: 48px;
+
+        @include media ($big) {
+            font-size: 14px;
+            padding: 14px;
+            margin-top: 32px;
+        }
+
+        @include media ($xs) {
+            width: 100%;
+            margin: 0;
+        }
+
+        &-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 32px;
+
+            @include media ($xs) {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+.project-presentation {
+    & > .container {
+        & > .presentation__content {
+            border-top: 0;
+        }
+    }
+}

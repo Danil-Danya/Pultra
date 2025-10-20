@@ -1,0 +1,17 @@
+.goods {
+    padding: 120px 0;
+    border-bottom: 1px solid;
+
+    @include media ($xl) {
+        padding: 60px 0;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include media ($xl) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

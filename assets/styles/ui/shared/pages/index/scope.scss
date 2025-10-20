@@ -1,0 +1,87 @@
+.scope {
+    padding: 120px 0;
+
+    @include media ($big) {
+        padding: 60px 0;
+    }
+
+    &__title {
+        color: #424243;
+        font-family: Bicubik;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 70.4px */
+        text-transform: uppercase;
+        max-width: 1100px;
+
+        @include media ($big) {
+            font-size: 64px;
+
+        }
+
+        @include media ($md) {
+            font-size: 32px;
+        }
+    }
+
+    &__slider {
+        &-slide {
+            //position: relative;
+            overflow: hidden;
+        }
+
+        &-button {
+            padding: 30px;
+
+             @include media ($md) {
+                display: none;
+            }
+        }
+    }
+
+    &__card {
+        position: relative;
+        overflow: hidden;
+
+        &-img {
+            width: 100%;
+        }
+
+        &-content {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        &-text {
+            color: #FFF;
+            font-family: Bicubik;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%; /* 23.4px */
+            text-transform: uppercase;
+        }
+
+        &-title {
+            color: #FFF;
+            font-family: Bicubik;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%; /* 41.6px */
+            text-transform: uppercase;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+}
+
+.orange {
+    color: #D56F2D;
+}

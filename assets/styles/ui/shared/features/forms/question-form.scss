@@ -1,0 +1,60 @@
+.question__form {
+    &-title {
+        color: #424243;
+        font-family: Bicubik;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 70.4px */
+        text-transform: uppercase;
+
+        @include media ($md) {
+            font-size: 32px;
+        }
+
+        &-mini {
+            color: #424243;
+            font-family: Bicubik;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%; /* 35.2px */
+            text-transform: uppercase;
+            margin: 40px 0 10px 0;
+
+            @include media ($md) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    &-text {
+        color: #424243;
+        font-family: Hauora;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 28.8px */
+        margin-bottom: 40px;
+    }
+
+    &-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    &-confirm {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+
+        &-p {
+            color: #000;
+            font-family: Hauora;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}

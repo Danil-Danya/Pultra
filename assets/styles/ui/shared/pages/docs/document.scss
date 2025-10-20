@@ -1,0 +1,66 @@
+.document {
+    padding-bottom: 120px;
+
+    &__title {
+        font-size: 64px;
+
+        @include media ($xxl) {
+            font-size: 48px;
+        }
+
+        @include media ($md) {
+            font-size: 32px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        margin-bottom: 30px;
+
+        @include media ($md) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+
+        @include media ($md) {
+            margin-top: 20px;
+           flex-wrap: wrap;
+        }
+    }
+
+    &__button {
+        padding: 20px;
+        display: flex;
+        width: 210px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        background: #E0E0E0;
+        border: 1px;
+        cursor: pointer;
+        transition: all 300ms;
+        color: #424243;
+        font-family: Bicubik;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        gap: 10px;
+
+        @include media ($md) {
+           font-size: 16px;
+           height: 30px;
+           width: 100%;
+        }
+
+        &:hover {
+            background: #dadada;
+        }
+    }
+}

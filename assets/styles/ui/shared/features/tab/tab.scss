@@ -1,0 +1,92 @@
+.tab {
+    padding: 120px 0;
+
+    &__switcher {
+        &-list {
+            display: flex;
+            border: 1px solid #424243;
+            width: 100%;
+
+            @include media ($big) {
+                overflow: scroll;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            & > li {
+                //flex: 1;
+                color: #424243;
+                font-family: Bicubik;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+                //letter-spacing: var(--Letter-Spacing, 0);
+                padding: 12px 32px;
+                border-right: 1px solid #424243;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 300ms;
+
+                @include media ($xl) {
+                    padding: 6px 16px;
+                    font-size: 18px;
+                }
+
+                @include media ($md) {
+                    font-size: 14px;
+                    padding: 12px 14px;
+                    width: 100%;
+                    display: block;
+                    min-width: 300px;
+                }
+
+                &.active {
+                    background: #d6d6d6;
+                }
+
+                &:hover {
+                    background: #d6d6d6;
+                }
+
+                &:first-of-type {
+                    border-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    background: #FFFFFF;
+    border-bottom: 1px solid #424243;
+}
+
+.tab-enter-active,
+.tab-leave-active {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tab-enter-from {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.tab-enter-to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+}

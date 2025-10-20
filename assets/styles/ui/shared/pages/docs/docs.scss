@@ -1,0 +1,21 @@
+.docs {
+    margin-bottom: 120px;
+
+    &__content {
+        display: grid;
+        grid-template-columns :repeat(4, minmax(460px, 1fr));;
+        margin-top: 40px;
+
+        @include media ($xxl) {
+            grid-template-columns: repeat(3, 1fr)
+        }
+
+        @include media ($lg) {
+            grid-template-columns: repeat(2, 1fr)
+        }
+
+        @include media ($md) {
+            grid-template-columns: repeat(1, 1fr)
+        }
+    }
+}

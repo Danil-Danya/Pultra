@@ -1,0 +1,53 @@
+.advantages {
+    border: 1px solid #424243;
+    border-top: 0;
+
+    &__title {
+        font-size: 48px;
+
+        @include media ($md) {
+            font-size: 32px;
+        }
+
+        &-container {
+            padding: 30px;
+            border-bottom: 1px solid #424243;
+
+            @include media ($md) {
+                padding: 15px;
+            }
+        }
+    }
+
+    &__container-content {
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include media ($md) {
+            padding: 15px;
+        }
+    }
+
+    &__card {
+        display: flex;
+        max-width: 800px;
+        align-items: center;
+        margin-bottom: 20px;
+
+        &-title {
+            font-size: 24px;
+        }
+
+        &-text {
+            color: #424243;
+            font-family: Hauora;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 22.4px */
+            margin-top: 10px;
+        }
+    }
+}

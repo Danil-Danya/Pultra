@@ -1,0 +1,140 @@
+.about {
+    padding: 120px 0 0 0;
+    border-top: 1px solid #424243;
+    border-bottom: 1px solid #424243;
+
+    @include media ($xl) {
+        padding: 60px 0 0 0;
+    }
+
+    @include media ($md) {
+        font-size: 24px;
+        padding: 60px 0 0 0;
+    }
+
+    &__title {
+        font-size: 64px;
+        max-width: 1390px;
+        margin-bottom: 30px;
+
+        @include media ($xl) {
+            font-size: 48px;
+        }
+
+        @include media ($lg) {
+            font-size: 32px;
+        }
+
+        @include media ($md) {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        &-container {
+            border-bottom: 1px solid #424243;
+
+            @include media ($preBig) {
+                border: 0;
+                margin: 0;
+            }
+        }
+        
+        & > .orange {
+            color: #D56F2D !important;
+        }
+    }
+    
+    &__image {
+        width: 100%;
+
+        @include media ($md) {
+            padding: 20px; 
+        }
+
+        @include media ($md) {
+            padding: 20px; 
+        }
+    }
+    
+    &__content {
+        &-container {
+            display: flex;
+            //border-bottom: 1px solid #424243;
+
+            @include media ($preBig) {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
+
+    &__left {
+        border-right: 1px solid #424243;
+        padding: 50px 40px 50px 0;
+        width: 50%;
+
+        @include media ($preBig) {
+            order: 2;
+            border: 0;
+            width: 100%;
+            padding: 0; 
+        }
+
+        @include media ($md) {
+            margin-left: 40px;
+            border-left: 1px solid #424243;
+        }
+    }
+
+    &__right {
+        padding: 50px 0px 50px 40px;
+        width: 50%;
+        position: relative;
+        
+        @include media ($preBig) {
+            padding: 0; 
+            order: 1;
+            border: 0;
+            width: 100%;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-top: 1px solid #424243;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-45deg);
+
+            @include media ($big) {
+                border: 0;
+                //bottom: 0;
+            }
+        }
+    }
+
+    &__text {
+        color: #424243;
+        font-family: Hauora;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 28.8px */
+
+        @include media ($xsl) {
+            font-size: 14px
+        }
+
+        @include media ($big) {
+            font-size: 12px
+        }
+    }
+}

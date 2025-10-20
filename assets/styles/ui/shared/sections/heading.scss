@@ -1,0 +1,161 @@
+.heading {
+    border-top: 1px solid #424243;
+    
+    &__content {
+        display: flex;
+        
+        @include media ($preBig) {
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+    }
+    
+    &__left {
+        padding: 40px;
+        padding-left: 0;
+        border-right: 1px solid #424243;
+        padding-bottom: 120px;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-top: 1px solid #424243;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: rotate(45deg);
+
+            @include media ($big) {
+                border: 0;
+                //bottom: 0;
+            }
+
+            @include media ($md) {
+                padding: 0;
+            }
+        }
+
+        @include media ($preBig) {
+            border: 0;
+            padding: 0;
+            order: 2;
+            margin-top: 20px;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__right {
+        padding: 40px;
+        position: relative;
+        padding-bottom: 120px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-top: 1px solid #424243;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-45deg);
+
+            @include media ($big) {
+                border: 0;
+                //bottom: 0;
+            }
+
+            @include media ($md) {
+                padding: 0;
+            }
+        }
+
+        @include media ($preBig) {
+            border: 0;
+            padding: 0;
+            order: 1;
+
+            margin-top: 20px;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        color: #424243;
+        font-family: Bicubik;
+        font-size: 84px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; 
+        text-transform: uppercase;
+
+        @include media ($xxl) {
+            font-size: 64px;
+        }
+
+        @include media ($lg) {
+            font-size: 32px;
+        }
+
+        @include media ($xs) {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        color: #424243;
+        font-family: Hauora;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 32px */
+        max-width: 755px;
+        width: 100%;
+        margin-top: 12px;
+
+        @include media ($xxl) {
+            font-size: 18px;
+        }
+
+        @include media ($md) {
+            font-size: 14px;
+        }
+    }
+
+    &__img {
+        width: 465px;
+
+        @include media ($preBig) {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        border: 0 !important;
+        outline: 0;
+
+        &-container {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}

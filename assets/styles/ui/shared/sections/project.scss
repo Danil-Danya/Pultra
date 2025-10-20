@@ -1,0 +1,80 @@
+.project {
+    background: #FFFFFF;
+    padding: 120px 0;
+
+    @include media ($big) {
+        padding: 60px 0;
+    }
+
+    &__title {
+        font-size: 64px;
+
+        @include media ($big) {
+            font-size: 32px;
+        }
+    }
+
+    &__paginate {
+        margin-top: 30px;
+    }
+
+    &__button {
+        &-link {
+            display: block;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            border: 1px solid #424243;
+            border-top: 0;
+            gap: 10px;
+            color: #424243;
+            font-family: Bicubik;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+            transition: all 300ms;
+            max-height: 80px;
+            cursor: pointer;
+            background: #FFFFFF;
+
+            &:hover {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__slider {
+        margin-top: 30px;
+    }
+
+    &__swiper {
+        padding: 50px 0;
+
+        @include media ($md) {
+            padding: 0;
+        }
+
+        &-image {
+            width: 100%;
+        }
+
+        &-pagination {
+            top: 180px !important;
+            & >  .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                border-radius: 0;
+                transition: all 300ms;
+
+                &-active {
+                    background-color: #D56F2D;
+                    width: 30px;
+                }
+            }
+        }
+    }
+}

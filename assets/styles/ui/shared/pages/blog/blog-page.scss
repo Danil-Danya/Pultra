@@ -1,0 +1,62 @@
+.blog__page {
+    padding-bottom: 120px;
+    padding-top: 30px;
+    //border-bottom: 1px solid #444;
+
+    @include media ($md) {
+        padding: 0;
+        padding-bottom: 60px;
+        font-size: 18px;
+    }
+
+    &-title {
+        font-size: 63px;
+
+        @include media ($big) {
+            font-size: 32px;
+        }
+
+        @include media ($md) {
+            font-size: 18px;
+        }
+    }
+
+    &-content {
+        display: flex;
+        gap: 40px;
+        margin-top: 30px;
+
+        @include media ($lg) {
+            flex-direction: column;
+        }
+
+        @include media ($md) {
+            gap: 20px;
+        }
+    }
+
+    &-left {
+        max-width: 470px;
+        width: 100%;
+        position: relative;
+        
+        @include media ($big) {
+            flex-direction: column;
+        }
+
+        @include media ($lg) {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    &-right {
+        max-width: 870px;
+        width: 100%;
+
+        @include media ($lg) {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}

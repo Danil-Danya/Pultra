@@ -1,0 +1,70 @@
+.consultation {
+    background: #424243;
+
+    &__left {
+        padding: 120px 0;
+
+        @include media ($lg) {
+            padding: 0 20px;
+        }
+    }
+    
+    &__right {
+        padding: 120px 0;
+        border-left: 1px solid #676767;
+
+        @include media ($lg) {
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+
+        @include media ($lg) {
+            flex-direction: column;
+            padding: 60px 0;
+            border-left: 1px solid #676767;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 60px 40px;
+
+        @include media ($lg) {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        color: #FFF;
+        font-family: Bicubik;
+        font-size: 75px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 90%; /* 75.6px */
+        text-transform: uppercase;
+
+        @include media ($md) {
+            font-size: 32px;
+        }
+    }
+
+    &__text {
+        color: #FFF;
+        font-family: Hauora;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 28.8px */
+
+        @include media ($md) {
+            font-size: 14px;
+        }
+    }
+}

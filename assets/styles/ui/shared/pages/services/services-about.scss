@@ -1,0 +1,111 @@
+.services__about {
+    padding-bottom: 120px;
+
+    &-title {
+        font-size: 64px;
+        width: 50%;
+        border-right: 1px solid #424243;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        position: relative;
+
+        @include media ($xsl) {
+            font-size: 48px;
+        }
+
+        @include media ($big) {
+            font-size: 38px;
+        }
+
+        @include media ($lg) {
+            border: 0;
+            font-size: 32px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        @include media ($xs) {
+            border: 0;
+            font-size: 24px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-top: 1px solid #424243;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: rotate(45deg);
+
+            // @include media ($big) {
+            //     border: 0;
+            //     //bottom: 0;
+            // }
+
+            @include media ($lg) {
+                border: 0;
+            }
+
+            @include media ($md) {
+                padding: 0;
+                border: 0;
+            }
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-top: 1px solid #424243;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            right: -52px;
+            transform: rotate(-45deg);
+
+            // @include media ($big) {
+            //     border: 0;
+            //     //bottom: 0;
+            // }
+
+            @include media ($lg) {
+                border: 0;
+            }
+
+            @include media ($md) {
+                padding: 0;
+                border: 0;
+            }
+        }
+    }
+
+    &-content {
+        border-top: 1px solid #424243;
+    }
+
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include media ($big) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media ($lg) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

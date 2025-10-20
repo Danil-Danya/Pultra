@@ -1,0 +1,92 @@
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    max-width: 1200px;
+    border: 1px solid #424243;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #424243;
+}
+
+.table-head,
+.table-body {
+    width: 100%;
+}
+
+.table-row {
+    border-bottom: 1px solid #424243;
+}
+
+.cell {
+    padding: 16px; // было 24px
+    color: #424243;
+    font-family: Hauora;
+    font-size: 12px; // было 18px
+    font-weight: 400;
+    line-height: 100%;
+    border-right: 1px solid #424243;
+    border-bottom: 1px solid #424243;
+    text-align: center;
+
+    // адаптив оставлен как в оригинале
+    @include media($big) {
+        font-size: 16px;
+    }
+
+    @include media($md) {
+        font-size: 14px;
+        padding: 14px 24px;
+    }
+
+    @include media($xs) {
+        font-size: 12px;
+    }
+
+    &-head {
+        color: #424243;
+        font-family: Bicubik;
+        font-size: 16px; // было 24px
+        font-weight: 400;
+        line-height: 100%;
+        background: #F0F0F0;
+        padding: 16px; // было 24px
+        border-right: 1px solid #424243;
+        border-bottom: 1px solid #424243;
+        text-align: center;
+
+        @include media($big) {
+            font-size: 18px;
+        }
+
+        @include media($md) {
+            font-size: 16px;
+            padding: 14px 24px;
+        }
+
+        @include media($xs) {
+            font-size: 14px;
+        }
+    }
+
+    &-sub {
+        @extend .cell-head;
+        background: #fafafa;
+    }
+
+    &-link {
+        color: #D56F2D;
+        display: inline-block;
+        text-decoration: underline;
+    }
+
+    &-text {
+        display: inline-block;
+    }
+}

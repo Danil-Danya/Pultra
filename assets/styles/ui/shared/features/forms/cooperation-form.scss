@@ -1,0 +1,75 @@
+.cooperation__form {
+    &-title {
+        font-size: 64px;
+
+        @include media ($xxl) {
+            font-size: 48px;
+        }
+
+        @include media ($md) {
+            font-size: 32px;
+        }
+    }
+
+    &-container {
+        margin-top: 40px;
+
+        @include media ($xxl) {
+            margin-top: 20px;
+        }
+    }
+
+    &-content {
+        display: flex;
+        gap: 10px;
+
+        @include media ($sm) {
+            flex-wrap: wrap;
+        }
+
+        &-full {
+            width: 100%;
+        }
+    }
+
+    &-input-container-full {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    &-input-container {
+        width: 50%;
+        margin-bottom: 10px;
+
+        @include media ($sm) {
+            width: 100%;
+        }
+    }
+
+    &-button {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    &-confirm {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+
+        &-p {
+            color: #000;
+            font-family: Hauora;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: auto;
+            text-underline-offset: auto;
+            text-underline-position: from-font;
+
+        }
+    }
+}

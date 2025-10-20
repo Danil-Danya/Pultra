@@ -1,0 +1,45 @@
+.cooperation__message {
+    padding: 120px 0;
+
+    @include media ($big) {
+        padding: 60px 0;
+    }
+
+    &-container {
+        display: flex;
+        gap: 30px;
+
+        @include media ($big) {
+            flex-direction: column;
+        }
+    }
+
+    &-left {
+        width: 50%;
+        
+        @include media ($big) {
+            order: 2;
+            width: 100%;
+        }
+    }
+
+    &-right {
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        @include media ($big) {
+            width: 100%;
+        }
+    }
+
+    &-img {
+        max-width: 945px;
+        width: 100%;
+        
+        @include media ($big) {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
