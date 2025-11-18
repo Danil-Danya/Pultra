@@ -20,9 +20,9 @@
                 <h4 class="post__subtitle-content title-h4" :id="content.slug" v-if="content?.subtitleMini">{{ content.subtitleMini }}</h4>
                 <img loading="lazy" class="post__img" format="webp" preload fetchpriority="high" :src="content?.image?.src" :alt="content?.image?.alt" v-if="content?.image?.src">
                 <p class="post__text" v-if="content?.text" v-html="content.text"></p>
-                <ol v-if="content?.list?.length" class="post__list">
+                <ol v-if="content?.listOl?.length" class="post__list">
                     <li
-                        v-for="(item, liIdx) in content.list"
+                        v-for="(item, liIdx) in content.listOl"
                         :key="liIdx"
                         class="post__li"
                     >
@@ -41,6 +41,27 @@
                         <p v-if="item.text" class="post__text" v-html="item.text"></p>
                     </li>
                 </ol>
+                 <ul v-if="content?.listUl?.length" class="post__list">
+                    <li
+                        v-for="(item, liIdx) in content.listUl"
+                        :key="liIdx"
+                        class="post__li"
+                    >
+                        <h2 v-if="item.title" class="post__subtitle title-h2">
+                            {{ item.title }}
+                        </h2>
+
+                        <h3 v-if="item.subtitle" class="post__subtitle title-h3">
+                            {{ item.subtitle }}
+                        </h3>
+
+                        <h4 v-if="item.subtitleMini" class="post__subtitle title-h4">
+                            {{ item.subtitleMini }}
+                        </h4>
+
+                        <p v-if="item.text" class="post__text" v-html="item.text"></p>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

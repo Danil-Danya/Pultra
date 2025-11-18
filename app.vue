@@ -33,6 +33,12 @@
             ScrollTrigger.getAll().forEach(t => t.kill())
         })
 
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant'
+        });
+
         setTimeout(() => {
             preloaderRef.value.show = false
         }, 500)

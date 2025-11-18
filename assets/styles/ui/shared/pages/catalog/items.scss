@@ -16,17 +16,21 @@
             margin-bottom: 20px;
         }
     }
-
+    
     &__content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-        align-items: start;
+        column-count: 2;
+        column-gap: 40px;
 
-        @include media ($big) {
-            grid-template-columns: repeat(1, 1fr); 
+        @include media($big) {
+            column-count: 1;
+        }
+
+        & > * {
+            break-inside: avoid;
+            margin-bottom: 40px;
         }
     }
+
 
     &__container {
         max-width: 890px;

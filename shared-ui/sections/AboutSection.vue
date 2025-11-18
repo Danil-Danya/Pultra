@@ -66,7 +66,7 @@
         await nextTick();
 
         setTimeout(() => {
-            animateProject()
+            //animateProject()
         }, 1000);
     });
 

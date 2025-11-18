@@ -15,6 +15,7 @@
 <script setup>
     import Navbar from '@/shared-ui/layouts/default/Navbar.vue';
     import Footer from '@/shared-ui/layouts/default/Footer.vue';
+    import initTopButton from '~/plugins/animations/sections/layout.section';
 
     import { useRoute } from 'vue-router';
 
@@ -31,6 +32,7 @@
     }
 
     onMounted(() => {
+        initTopButton();
         showMobile();
     })
 

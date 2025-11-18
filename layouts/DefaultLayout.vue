@@ -20,6 +20,8 @@
 
     import MobileNavbar from '@/shared-ui/layouts/default/MobileNavbar.vue';
 
+    import initTopButton from '~/plugins/animations/sections/layout.section';
+
     const isMobile = ref(false);
 
     const showMobile = () => {
@@ -29,6 +31,7 @@
     }
 
     onMounted(() => {
+        initTopButton();
         showMobile();
     })
 

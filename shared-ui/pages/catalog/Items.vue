@@ -36,18 +36,17 @@
     })
 
     const content = computed(() => {
-        return props.categories.slice(0, 3).map((cat, idx) => ({
+        return props.categories.map((cat) => ({
             title: cat.title.toUpperCase(),
             link: `/produkciya/${cat.slug}`,
-            cards: idx === 2 
-            ? [] 
-            : (cat.children ?? []).map(child => ({
+            cards: (cat.children ?? []).map((child) => ({
                 title: child.title.toUpperCase(),
                 link: `/produkciya/${cat.slug}/${child.slug}`,
                 image: child.image?.url || '/images/catalog/items/ph.png'
             }))
         }));
     });
+
 
 
     const isMobile = ref(false);

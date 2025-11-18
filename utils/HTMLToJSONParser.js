@@ -13,10 +13,12 @@ export default function parseHtmlToData(html) {
             subtitle: '', 
             subtitleMini: '', 
             text: '', 
-            list: [], 
+            listUl: [], 
+            listOl: [], 
             image: null 
         };
     }
+
 
     // Добавляет класс seo__link ко всем ссылкам в узле
     function enhanceLinks(node) {
@@ -28,21 +30,21 @@ export default function parseHtmlToData(html) {
     }
 
     // Обрабатывает <p> и сохраняет HTML
-    // function enhanceParagraph(pNode) {
-    //     enhanceLinks(pNode);
-    //     return pNode.innerHTML.trim();
-    // }
-
     function enhanceParagraph(pNode) {
-         enhanceLinks(pNode);
-
-        // Создаём клон вручную через повторный парсинг
-        const cloned = parse(pNode.toString());
-        cloned.querySelectorAll('img').forEach(img => img.remove());
-
-        const htmlWithoutImages = cloned.innerHTML.trim();
-        return htmlWithoutImages;
+        enhanceLinks(pNode);
+        return pNode.innerHTML.trim();
     }
+
+    // function enhanceParagraph(pNode) {
+    //      enhanceLinks(pNode);
+
+    //     // Создаём клон вручную через повторный парсинг
+    //     const cloned = parse(pNode.toString());
+    //     cloned.querySelectorAll('img').forEach(img => img.remove());
+
+    //     const htmlWithoutImages = cloned.innerHTML.trim();
+    //     return htmlWithoutImages;
+    // }
 
 
     // ⚡ Новая функция — для <li> сохраняет HTML с выделениями и ссылками
@@ -95,7 +97,7 @@ export default function parseHtmlToData(html) {
     }
 
 
-    function parseLi(liNode) {
+    function parseLi(liNode, listType = 'ul') {
         const item = createBlock();
 
         liNode.childNodes.forEach(child => {
@@ -120,7 +122,15 @@ export default function parseHtmlToData(html) {
                 case 'ul':
                 case 'ol': {
                     const subItems = child.querySelectorAll(':scope > li');
-                    subItems.forEach(subLi => item.list.push(parseLi(subLi)));
+                    subItems.forEach(subLi => {
+                        const parsed = parseLi(subLi, tag);
+                        if (tag === 'ul') {
+                            item.listUl.push(parsed);
+                        }
+                        else {
+                            item.listOl.push(parsed);
+                        }
+                    });
                     break;
                 }
 
@@ -132,7 +142,6 @@ export default function parseHtmlToData(html) {
                 }
 
                 default: {
-                    // ⚡ Сохраняем HTML внутри других тегов в <li>
                     const html = extractLiContent(child);
                     if (html) item.text += (item.text ? ' ' : '') + html;
                 }
@@ -142,6 +151,7 @@ export default function parseHtmlToData(html) {
         item.text = item.text.trim();
         return item;
     }
+
 
     function walk(node) {
         const tag = node.tagName?.toLowerCase?.();
@@ -163,25 +173,29 @@ export default function parseHtmlToData(html) {
             }
 
             case 'p': {
+                if (node.querySelector('img')) {
+                    break;
+                }
+
                 const html = enhanceParagraph(node);
                 if (html) current.text += (current.text ? '\n' : '') + html;
                 break;
             }
 
-            case 'ul':
-            case 'ol': {
+            case 'ul': {
                 const items = node.querySelectorAll(':scope > li');
-                const parsedItems = items.map(parseLi);
-                if (parsedItems.length) current.list.push(...parsedItems);
+                const parsedItems = items.map(li => parseLi(li, 'ul'));
+                if (parsedItems.length) current.listUl.push(...parsedItems);
                 break;
             }
 
-            case 'img': {
-                const src = node.getAttribute('src');
-                const alt = node.getAttribute('alt') || '';
-                if (src) current.image = { src, alt };
+            case 'ol': {
+                const items = node.querySelectorAll(':scope > li');
+                const parsedItems = items.map(li => parseLi(li, 'ol'));
+                if (parsedItems.length) current.listOl.push(...parsedItems);
                 break;
             }
+
 
             case 'table': {
                 const tableData = parseTable(node);
@@ -216,7 +230,8 @@ export default function parseHtmlToData(html) {
             block.subtitle ||
             block.subtitleMini ||
             block.text ||
-            block.list.length ||
+            block.listUl.length ||
+            block.listOl.length ||
             block.image ||
             block.table
         );

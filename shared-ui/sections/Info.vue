@@ -35,11 +35,12 @@
                                 :table="content.table"
                             />
 
-                            <ol v-if="content?.list?.length" class="information__list">
+                            <ol v-if="content?.listOl?.length" class="information__list">
                                 <li
-                                    v-for="(item, liIdx) in content.list"
+                                    v-for="(item, liIdx) in content.listOl"
                                     :key="liIdx"
                                     class="information__li"
+                                    style="list-style: decimal;"
                                 >
                                     <h2 v-if="item.title" class="information__subtitle title-h2">
                                         {{ item.title }}
@@ -56,6 +57,30 @@
                                     <p v-if="item.text" class="information__text" v-html="item.text"></p>
                                 </li>
                             </ol>
+
+                            <ul v-if="content?.listUl?.length" class="information__list">
+                                <li
+                                    v-for="(item, liIdx) in content.listUl"
+                                    :key="liIdx"
+                                    class="information__li"
+                                    style="list-style: disc;"
+                                >
+                                    <h2 v-if="item.title" class="information__subtitle title-h2">
+                                        {{ item.title }}
+                                    </h2>
+
+                                    <h3 v-if="item.subtitle" class="information__subtitle title-h3">
+                                        {{ item.subtitle }}
+                                    </h3>
+
+                                    <h4 v-if="item.subtitleMini" class="information__subtitle title-h4">
+                                        {{ item.subtitleMini }}
+                                    </h4>
+
+                                    <p v-if="item.text" class="information__text" v-html="item.text"></p>
+                                </li>
+                            </ul>
+
                         </div>
                     </div>
                 </div>

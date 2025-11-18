@@ -49,8 +49,8 @@ img {
 .top-button {
     position: fixed;
     z-index: 999;
-    bottom: 10px;
-    right: 5%;
+    bottom: 50px;
+    left: 50px;
     color: #424243;
     font-family: Bicubik;
     font-size: 32px;
@@ -69,6 +69,10 @@ img {
     border: 1px solid #424243;
     color: #FFFFFF;
     transition: 300ms;
+
+    @include media ($xs) {
+        left: 15px;
+    }
 
     & > span {
         height: 25px;

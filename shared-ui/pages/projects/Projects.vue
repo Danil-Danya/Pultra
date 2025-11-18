@@ -28,7 +28,7 @@
     import ProjectSlider from '@/features/sliders/PartnersSlider.vue';
     import Pagination from '@/features/pagination/Pagination.vue';
     
-    import animateProject from '@/plugins/animations/sections/project.section.js';
+    //import animateProject from '@/plugins/animations/sections/project.section.js';
 
     import { useGsapCleanup } from '@/composables/useGsapCleanup';
     import { useProjectStore } from '@/entities/projects/store.js';
@@ -65,7 +65,7 @@
         await nextTick();
 
         setTimeout(() => {
-            animateProject()
+            //animateProject()
         }, 1000);
     });
 

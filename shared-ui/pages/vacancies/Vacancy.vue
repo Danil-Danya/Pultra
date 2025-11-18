@@ -38,22 +38,49 @@
                             class="vacancy__image"
                         >
 
-                        <ul 
-                            v-if="item.list && item.list.length" 
-                            class="vacancy__list"
-                        >
-                            <li 
-                                class="vacancy__li" 
-                                v-for="(li, liIndex) in item.list" 
-                                :key="liIndex"
+                        <ol v-if="item?.listOl?.length" class="information__list">
+                            <li
+                                v-for="(text, liIdx) in content.listOl"
+                                :key="liIdx"
+                                class="information__li"
+                                style="list-style: decimal;"
                             >
-                                <p 
-                                    v-if="li.text" 
-                                    class="vacancy__text"
-                                    v-html="li.text"
-                                >
-                                    
-                                </p>
+                                <h2 v-if="item.title" class="information__subtitle title-h2">
+                                    {{ text.title }}
+                                </h2>
+
+                                <h3 v-if="item.subtitle" class="information__subtitle title-h3">
+                                    {{ text.subtitle }}
+                                </h3>
+
+                                <h4 v-if="item.subtitleMini" class="information__subtitle title-h4">
+                                    {{ text.subtitleMini }}
+                                </h4>
+
+                                <p v-if="text.text" class="information__text" v-html="text.text"></p>
+                            </li>
+                        </ol>
+
+                        <ul v-if="item?.listUl?.length" class="information__list">
+                            <li
+                                v-for="(text, liIdx) in content.listUl"
+                                :key="liIdx"
+                                class="information__li"
+                                style="list-style: disc;"
+                            >
+                                <h2 v-if="item.title" class="information__subtitle title-h2">
+                                    {{ text.title }}
+                                </h2>
+
+                                <h3 v-if="item.subtitle" class="information__subtitle title-h3">
+                                    {{ text.subtitle }}
+                                </h3>
+
+                                <h4 v-if="item.subtitleMini" class="information__subtitle title-h4">
+                                    {{ text.subtitleMini }}
+                                </h4>
+
+                                <p v-if="text.text" class="information__text" v-html="text.text"></p>
                             </li>
                         </ul>
                     </div>

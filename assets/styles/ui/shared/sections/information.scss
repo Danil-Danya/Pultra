@@ -124,7 +124,7 @@
 
     &__li {
         display: list-item;
-        list-style: inherit;
+        //list-style: inherit;
         margin-bottom: 10px;
 
         & > p {
@@ -134,7 +134,7 @@
     
     &__list {
         padding: 10px;
-        list-style: decimal;
+        //list-style: decimal;
         list-style-position: outside;
         padding-left: 2em;
         //color: #000;

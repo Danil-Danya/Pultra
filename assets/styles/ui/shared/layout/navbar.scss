@@ -20,7 +20,7 @@
             gap: 10px;
         }
 
-        @include media ($xl) {
+        @include media ($big) {
             display: none;
         }
     }
